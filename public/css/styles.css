@@ -1,0 +1,26 @@
+h1,
+p,
+form {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea {
+  margin-bottom: 15px;
+}
