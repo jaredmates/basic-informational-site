@@ -1,3 +1,18 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem; /* 16px */
+  min-height: 100%;
+  background-color: #8b0032;
+  background-color: #5870cb;
+}
+
 h1,
 p,
 form {
@@ -23,4 +38,47 @@ input {
 
 textarea {
   margin-bottom: 15px;
+}
+
+/* Create a border shadow around an input element */
+input:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 2px solid rgba(81, 203, 238, 1);
+}
+
+/* Creates the link hover effect */
+a {
+  background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+  background-image: linear-gradient(to right, #8c9eff, #8c9eff 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-size: 24px;
+}
+
+a:before {
+  content: "";
+  background: #54b3d6;
+  background: #8c9eff;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
 }
